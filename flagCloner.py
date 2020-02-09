@@ -5,7 +5,7 @@ from os.path import isfile, join, dirname, abspath
 import sys
 import random
 
-NUM_COPIES = 2
+NUM_COPIES = 50
 randomChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 # if sys.argv[1] is None:
@@ -28,8 +28,7 @@ for filename in files:
         for j in range(len(part_to_replace)):
             tempFilename += random.choice(randomChars)
         newFileName = filename.replace(part_to_replace, tempFilename)
-        # TODO write the new file
+        # write the new file
         open(newFileName, "w+")
-    print(filename)
 
 
