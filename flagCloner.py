@@ -19,7 +19,7 @@ files = [file for file in listdir(path) if isfile(join(path, file))]
 for filename in files:
     start = filename.find('_') + 1
     end = filename.find('.')
-    if start < 0 or end < 0 or start > end:
+    if start < 1 or end < 0 or start > end:
         continue
     part_to_replace = filename[start:end]
     for i in range(0, NUM_COPIES):
