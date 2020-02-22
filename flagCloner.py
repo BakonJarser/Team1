@@ -5,14 +5,20 @@ from os.path import isfile, join, dirname, abspath
 import sys
 import random
 
+# Set the number of false flags to create
 NUM_COPIES = 50
+# Set the valid character set for the filenames
 randomChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
+# Uncomment this if you want to input the path of the flag directory
+# Otherwise this needs to be run in the same directory as the flag.
 # if sys.argv[1] is None:
 #     print("Usage: flagCloner <flag directory>")
 #     exit(1)
 
 path = dirname(abspath(__file__))
+# Uncomment this if you want to input the path of the flag directory
+# Otherwise this needs to be run in the same directory as the flag.
 # path = sys.argv[1]
 files = [file for file in listdir(path) if isfile(join(path, file))]
 
